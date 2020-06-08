@@ -13,8 +13,13 @@ namespace WebNew.Models
         public string Place { get; set; }
         public DateTime Datetime { get; set; }
         public Category CategoryId { get; set; }
-              
-       
+        public object LecturerID { get; internal set; }
+        public object DataTime { get; internal set; }
+
+        public static implicit operator Course(Course v)
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }
