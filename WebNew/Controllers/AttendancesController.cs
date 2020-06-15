@@ -26,7 +26,7 @@ namespace WebNew.Controllers
                 return BadRequest("The Attendance already exists!");
             var attendance = new Attendance
             {
-                CourseId = attendanceDto.CourseId,
+                CourseId = attendanceDto.CourseId, 
                 AttendeeId = userId
             };
             _dbContext.Attendances.Add(attendance);

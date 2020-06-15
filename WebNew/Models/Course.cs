@@ -17,15 +17,7 @@ namespace WebNew.Models
         public Category Category { get; set; }
         public byte CategoryId { get; set; }
         //public object LecturerID { get; internal set; }
-        //public object DataTime { get; internal set; }
-        //public class Category
-        //{
-        //    public byte Id { get; set; }
-        //    [Required]
-        //    [StringLength(255)]
-        //    public string Name { get; set; }
-
-        //}
+  
     
     }
     

@@ -23,12 +23,12 @@ namespace WebNew.Controllers
                 .Include(c => c.Category)
                 .Where(c => c.Datetime> DateTime.Now);
 
-            var viewModels = new CoursesViewModel
+            var viewModel = new CoursesViewModel
             {
                 UpcommingCourses = upcommingCourses,
                 ShowAction = User.Identity.IsAuthenticated
             };
-            return View(viewModels);  
+            return View(viewModel);  
         }
 
         public ActionResult About()

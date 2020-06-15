@@ -1,10 +1,10 @@
 ﻿@model WebNew.ViewModels.CoursesViewModel
 @{
     ViewBag.Title = "Attending";
-    Layout = "~/View/Courses/Shared/_Layout.cshtml";    
+    Layout = "~/Views/Shared/_Layout.cshtml";    
 }
 <h2>Attending</h2>
-<div class="row">
+
     <ul class="course">
         @foreach (var course in Model.UpcommingCourses)
         {
@@ -40,7 +40,6 @@
         }
 
     </ul>
-</div>
 @section scripts
 {
     <script>

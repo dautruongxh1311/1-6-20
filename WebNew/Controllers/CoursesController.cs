@@ -63,13 +63,11 @@ namespace WebNew.Controllers
                 Datetime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place
-
             };
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
-        [Authorize]
         [Authorize]
         public ActionResult Edit(int id)
         {
