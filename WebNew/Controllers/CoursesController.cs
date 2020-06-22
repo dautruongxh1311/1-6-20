@@ -105,6 +105,18 @@ namespace WebNew.Controllers
             _dbContext.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
+        [Authorize]
+        public ActionResult Follow()
+        {
+            var userId = User.Identity.GetUserId();
+            var follows = _dbContext.Followings.Where(a => a.FollowerId == userId).Select(a => a.Followee).ToList();
+            var viewModel = new CoursesViewModel
+            {
+                Follows = follows,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);
+        }
         public ActionResult Mine()
         {
             var userId = User.Identity.GetUserId();

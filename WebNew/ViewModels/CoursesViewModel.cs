@@ -10,5 +10,6 @@ namespace WebNew.ViewModels
     {
         public IEnumerable<Course> UpcommingCourses { get; set; }
         public bool ShowAction { get; set; }
+        public IEnumerable<ApplicationUser> Follows { get; set; }
     }
 }
